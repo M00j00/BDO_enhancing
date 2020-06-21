@@ -13,8 +13,6 @@ dura_loss_by_tier = [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 10, 10, 10, 10
 
 NB_SIM = 10000
 
-success_rates_by_tier = []
-
 MEM_PRICE  = 1800000
 GEM_PRICE  = 800000
 BASE_PRICE = 250000000
@@ -78,6 +76,8 @@ def print_result(data, percentiles=[0, 25, 50, 75, 100]):
     print('#Final Tier:')
     for i, final in enumerate(pfinal):
         print(f'\t{percentiles[i]}% < {TIERS[int(final)]}')
+
+    #[print(f'\t{TIERS[i]}->{TIERS[i+1]}: {pa}') for i, pa in enumerate(pattempts) if p > 0]
 
 if __name__ == "__main__":
 
